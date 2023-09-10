@@ -1,0 +1,2151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Document</title>
+    <link rel="" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.2/js/bootstrap.min.js">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <style>
+
+               * {
+                 margin: 0;
+                 padding: 0;
+               }
+          
+              .col-md-3{
+                display: inline-block;
+                margin-left:-4px;
+              }
+              .col-md-3 img{
+                width:100%;
+                height:auto;
+              }
+              body .carousel-indicators li{
+                background-color:white;
+              size: 200px;
+              }
+              body .carousel-control-prev-icon,
+              body .carousel-control-next-icon{
+                background-color:rgb(0, 0, 0);
+                size: 200px;
+
+              }
+              body .no-padding{
+                padding-left: 0;
+                padding-right: 0;
+              }
+              .fa-solid fa-user{
+              color: blue;
+              }
+              .fa-brands fa-facebook-f{
+                color:white;
+              }
+              a{
+                text-decoration: none;
+                color: black;
+              }
+              .card {
+                border: none;
+                border-radius: 0;
+                box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+              }
+              .carousel-inner {
+                padding: 1em;
+              }
+              .carousel-control-prev,
+              .carousel-control-next {
+                margin-top: 200px;
+                /* background-color: #e1e1e1; */
+                width: 6vh;
+                height: 6vh;
+                border-radius: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+              .carousel-control-prev span,
+              .carousel-control-next span {
+                width: 1.5rem;
+                height: 1.5rem;
+              }
+              @media screen and (min-width: 577px) {
+                .cards-wrapper {
+                  display: flex;
+                }
+                .card {
+                  margin: 0 0.5em;
+                  width: calc(100% / 2);
+                }
+                .image-wrapper {
+                  height: 20vw;
+                  margin: 0 auto;
+                }
+              }
+              @media screen and (max-width: 576px) {
+                .card:not(:first-child) {
+                  display: none;
+                }
+              }
+              
+              .image-wrapper img {
+                max-width: 100%;
+                max-height: 100%;
+              } 
+               .col-md-4{
+                display: inline-block;
+                margin-left:-4px;
+              }
+              .col-md-4 img{
+                width:100%;
+                height:auto;
+              }
+              .abc img {
+                height: 300px !important;
+                width: 500px !important;
+              
+              } 
+              .circles {
+                height:100px;
+                width:200px;
+                /* background-color: black; */
+                /* padding:13px 0px 10px 0px; */
+                /* border-radius: 50%; */
+               position: relative;
+               /* background-color: black; */
+               margin-left: 46.5%;
+               margin-top: -45px;
+              padding: 5px;
+              
+              }
+              .foot_merge
+              {
+                position: relative;
+              }
+
+              .footer{
+                width: 100%;
+                background-color: black;
+                position: relative;
+                margin-top: 0px;
+                padding-top: 0px;
+              }
+              .xyz {
+              display: flex;
+              justify-content: space-evenly;
+              /* align-items: center; */
+              font-size: 15PX;
+            }
+             .def {
+              padding-left: 40px;
+              white-space: nowrap;
+              font-size: small;
+                     }
+             .circles_1{
+                height: 140px;
+                width: 240px;
+                position:absolute;
+                margin-left: 45%;
+                margin-top: -70px;
+              }
+              .log_2{
+                height: 200px;
+                background-color: black;
+                position: relative;
+              }
+              .icon{
+                margin:0px 500px 0px 500px;
+                display: flex;
+                justify-content: space-evenly;
+              }
+              .main-02  {
+                display: flex;
+                flex-direction: row;
+                margin-left: 50px;
+              }
+              .main-02 a{
+                color:white !important;
+              }
+                
+              .main-03{
+                display: flex;
+                /* flex-direction: row; */
+                margin-left: 200px;
+                /* background-color: gray; */
+                justify-content: space-evenly;
+              }
+              .Register{
+                color: #e7eaee;
+              }
+ </style>
+</head>
+
+<body>
+  <div style="position: fixed; z-index: 5;">
+
+      <nav class="navbar navbar-expand-sm " style="background-color: black;">
+        <div class="container-fluid" >
+
+
+          <a href="/"><svg width="1em" height="1em" viewBox="0 0 98 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 28px; width: 98px;"><path fill="url(#SugarLogo_svg__a)" d="M.14.52h97.72v27.92H.14z"></path><defs><pattern id="SugarLogo_svg__a" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#SugarLogo_svg__b" transform="matrix(.00151 0 0 .0053 0 0)"></use></pattern><image id="SugarLogo_svg__b" width="661" height="189" xlink:href="data:image/png;base64,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"></image></defs></svg></a>
+            <!-- <a class="navbar-brand" href="#"><img
+                    src="https://d32baadbbpueqt.cloudfront.net/Logo/6c8ea981-9f2c-4931-b2b0-9c71f258976d.gif"
+                    alt=""></a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" >
+              <ul class="main-02"> 
+                <input class="" type="text" placeholder="Try liquid lipstick" style="width: 500px; font-size: 10px;" >
+                <button class="btn btn-primary" type="button" style="width: 150px; background-color: #e9f1ff; color: black;">Search</button>
+              </ul>
+              
+              <ul class="Register" style="color: #e7eaee;">
+                <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+                <a href="loggin.html">login/Register</a>
+              </ul>
+              <ul class="main-03">
+              <li class="nav-item">
+                <a class="nav-link " href="">Account</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link " href="">
+                   Wishlist</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link " href=""> Cart</a>
+              </li>  
+            </ul>
+        </div>
+        </div>
+    </nav>
+  
+
+  <div class="xyz">
+    <nav class="navbar navbar-expand-lg navbar-light " style="width: 100%; background-color: rgb(32, 31, 31);">
+      <div class="container-fluid">
+        <span class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </span>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <div class="nav-item dropdown">
+              <div id="#two">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false" style="color: #e7eaee;">lips</a>
+
+                 <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                  <div style="display: flex;">
+
+                 
+                  <div class="def">
+
+
+                    <div style="width: 200px;">
+                   <li> <a href=""style="color: black;" class="fw-bold" style="white-space: nowrap" >LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">TRANSFER PROOF LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">MATTE LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">LIQUID LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">CRAYON LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">POWDER LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">SATIN LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">BULLET LIPSTICKS</a></li>
+                   <li> <a href=""style="color: black;">LIP GLOSS & LINERS</a></li>
+                  </div>
+
+                  </div>
+
+                  <div class="def">
+
+                    <a href="" class="fw-bold" style="color: black;">LIPS CARE</p>
+                    <li><a href="" style="color: black;">LIPSTICK FIXERS & REMOVERS</a></li>
+                    <li><a href="" style="color: black;">LIP PRIMERS & SCRUBS</a></li>
+                    <li><a href="" style="color: black;">LIP BALMS</a></li>
+                  </div>
+
+                  <div class="def">
+                    <p class="fw-bold">LIPSTICK SETS & COMBOS</p>
+                    <li><a href="#" style="color: black;">LIPSTICK SETS   <a></li>
+                    <li><a href="#" style="color: black;">LIPSTICK COMBOS</a></li>
+                  </div>
+                 
+                </div>
+
+                 </div>
+             
+              </div>
+            </div>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: #e7eaee;">EYES</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">KOHL & KAJAL
+                  KOHLS
+                  KAJALS</a></li>
+                <li><a class="dropdown-item" href="#">MASCARA
+                  VOLUMIZING MASCARA
+                  CURL LENGTHENING MASCARA</a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: #e7eaee;">FACE</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: #e7eaee;">NAILS</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: #e7eaee;">SKINCARE</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: #e7eaee;">
+                ACCESSORIES</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: #e7eaee;">GIFTS & KITS</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" style="color: #e7eaee;">BESTSELLER</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"style="color: #e7eaee;">NEW LAUNCHES</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"style="color: #e7eaee;">OFFERS</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"style="color: #e7eaee;">BLOG</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"style="color: #e7eaee;">STORE</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+                <li><a class="dropdown-item" href="#"></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+     </nav>      
+  </div>
+
+
+
+
+
+
+
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <br>
+      <!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel" >
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner l">
+    <div class="carousel-item active">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Ffd7d113f-adcb-4131-a6ba-f37d65a12834.jpg&w=1920&q=75" alt="" class="d-block" style="width:100%; height: 400px;">
+    </div>
+    <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F9fb48920-0563-4896-a293-77c719a83137.jpg&w=1920&q=75" alt="" class="d-block" style="width:100%; height: 400px;">
+    </div>  
+    <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F4f19cd09-25ec-4250-a8ea-466175d925d2.jpg&w=1920&q=75" alt="" class="d-block" style="width:100%; height: 400px;">
+    </div>  <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fcd104896-5c6e-47f7-a628-4772fb6d4c98.gif&w=1920&q=75" alt="" class="d-block" style="width:100%; height: 400px;">
+    </div>  <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fb0ae6dbd-56f3-430a-a23d-e4e5f9c5a4fd.jpg&w=1920&q=75" alt="" class="d-block" style="width:100%; height: 400px;">
+    </div>  <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F3eac64a8-49e4-4cf8-820a-863e99274974.jpg&w=1920&q=75" alt="" class="d-block" style="width:100%; height: 400px;">
+    </div>  <div class="carousel-item">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="d-block" style="width:100%">
+    </div>   
+     
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+  <div id="carouselExampleControls" class="carousel slide bg-dark " >
+<div align="center" style="color: aliceblue; padding-top: 20px; font-size: 40px;" >BEST SELLER</div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper " style="height: 400px; margin: 20px 120px 80px 120px;">
+          <div class="card ">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2Fa_00b52826-78d8-4da0-aba1-fbcbfb39dc33.jpg%3Fv%3D1688228539&w=256&q=75" alt="..." style="height: 200px; ">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="font-size: 15px; color: black;">LALA LOVE 18HR Liquid lipstick-set of 3</a></h5>
+              <p class="card-text"align="center"><a href=""style="color: black;">₹899 </a><a href="" style="color: red;">(25% off)</a></p>
+              <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+              <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2Fparent1stcard_1_7aa4b700-2b5f-4212-8b56-86889ab8a390.jpg%3Fv%3D1689262362&w=256&q=75" alt="..."  style="height: 200px; ">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href=""style="font-size: 15px;color: black;">Matte As Hell Crayon Lipstick <br> 33 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹714</a><a href=""style="color: red;">(16% off)</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2FBaseOfGloryPoreMinimizingPrimerPDPimages1copy.jpg%3Fv%3D1682956017&w=256&q=75" alt="..."style="height: 200px; ">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="font-size: 15px;color: black;">Base of Glory Pore Minimizing</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹714</a><a href=""style="color: red;">(16%)</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2F1_2d186f9b-9024-4e23-a0d2-a55b7671e89c.jpg%3Fv%3D1657123108&w=256&q=75" alt="..." style="height: 200px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;">Contour De Force Eyes And Face</a></h5>
+              <p class="card-text"align="center"><a href=""style="color: black;">₹1099</a></p>
+              <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+              <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper"style="height: 400px; margin: 20px 120px 80px 120px;">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2FMatteAttackTransferproofLipstickPDPimagesFinalparent1stcard.jpg%3Fv%3D1682957359&w=256&q=75" alt="..." style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Matte Attack Transferproof <br>17 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;" >₹630</a><a href=""style="color: red;">(16% off)</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2F3_7.jpg%3Fv%3D1626795160&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;">All Set To Go Tranlucent</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹604</a><a href=""style="color: red;">(16% off)</a></p>
+                 <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2FKohl-Of-Honour-Intense-Kajal-PDP-images-Parent-page.jpg%3Fv%3D1679673305&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Kohl Of Honour Intense Kajal <br>6 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹210</a><a href=""style="color: red;">(16% off)</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+              </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2F521737983-parent-1st-card.jpg%3Fv%3D1690905085&w=256&q=75" alt="..."style="height: 150px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Maximeyes Drama Magnetic Lashes & Eyeliner<br>3 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹699</a><a href=""style="color: red;">(16% off)</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper"style="height: 400px; margin: 20px 120px 80px 120px;">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2FParent-Page_ac0201bb-8f51-447c-b6e0-4404786076a2.jpg%3Fv%3D1680364145&w=256&q=75" alt="..."style="height: 150px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Nothing Else Matter Longwear lipstick<br>21 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹504</a><a href=""style="color: red;">(16% off)</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+              </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2F1_bec48e26-bd4f-4b25-9a65-742f14ce4955.jpg%3Fv%3D1671604434&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Bold Unfold Waterproof Mascara <br>2 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹599</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2F01_b96a3e62-1405-4133-9334-b1a9c4f1c252.jpg%3Fv%3D1682957226&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >All Set To Go Banana Powder</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹649</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2F01.jpg%3Fv%3D1679931324&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Contour De Force Face Palette <br>3 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹799</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="carousel-item">
+        <div class="cards-wrapper"style="height: 400px; margin: 20px 120px 80px 120px;">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2F01_b96a3e62-1405-4133-9334-b1a9c4f1c252.jpg%3Fv%3D1682957226&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >All Set To Go Banana Powder</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹649</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+              </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2F01.jpg%3Fv%3D1679931324&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Contour De Force Face Palette <br>3 shades</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹799</a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2F1_37bd5456-4125-46cc-8313-cc0a444cf3de.jpg%3Fv%3D1685635807&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >Grand Finale Setting Mist</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹602</a><a href=""style="color: red;">(14% off)</a></p></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Fproducts%2Fmoisturiser.jpg%3Fv%3D1626968292&w=256&q=75" alt="..."style="height: 200px;margin-top: 20px;">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title"align="center"><a href="" style="color: black;font-size: 15px;" >AqUaholic Priming Moisturizer</a></h5>
+              <p class="card-text"align="center"><a href="" style="color: black;">₹499</a></a></p>
+                <a href=""><img src="https://www.citypng.com/public/uploads/preview/-51611635078anriajnajn.png" alt="" style="height: 40px;margin-left: 50px; "></a>
+                <a href="#" class=" btn btn-dark" style="color: aliceblue; margin-left: 30px;">CHOOSE ITEM</a>    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>  
+</div>
+  </div>
+  <h1 align="center">Hot Deal</h1>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div id="demo3" class="carousel slide" >
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo3" data-slide-to="0" class="active"></li>
+    <li data-target="#demo3" data-slide-to="1"></li>
+    <li data-target="#demo3" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner no-padding">
+    <div class="carousel-item active abc">
+      <div class="col-xs-4 col-sm-4 col-md-4 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F3b5de412-3901-4454-ad89-52db6f1b5488.gif&w=1920&q=75"class="rounded" >
+      </div>    
+      <div class="col-xs-4 col-sm-4 col-md-4 " >
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F24e84281-4e0e-4293-b4a2-10fe65d49d87.gif&w=1920&q=75"class="rounded">
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F1d51ac90-37a1-4c99-83ca-4e4d831f1a77.gif&w=1920&q=75"class="rounded">
+      </div>   
+      <!-- <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    -->
+    </div>
+    <div class="carousel-item abc" >
+      <!-- <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>     -->
+      <div class="col-xs-4 col-sm-4 col-md-4" >
+        <img   src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F87f85ec7-c08b-4560-8466-b91489a98389.gif&w=1920&q=75"class="rounded">
+      </div>   
+        <div class="col-xs-4 col-sm-4 col-md-4">
+          <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F3b5de412-3901-4454-ad89-52db6f1b5488.gif&w=1920&q=75"class="rounded" >
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F24e84281-4e0e-4293-b4a2-10fe65d49d87.gif&w=1920&q=75"class="rounded" >
+      </div>  
+    </div>
+    <div class="carousel-item abc">
+      <!-- <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>     -->
+      <div class="col-xs-4 col-sm-4 col-md-4 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F24e84281-4e0e-4293-b4a2-10fe65d49d87.gif&w=1920&q=75"class="rounded" >
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F1d51ac90-37a1-4c99-83ca-4e4d831f1a77.gif&w=1920&q=75"class="rounded">
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        <img  src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F87f85ec7-c08b-4560-8466-b91489a98389.gif&w=1920&q=75"class="rounded">
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo3" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo3" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<h1 align="center">JUST-IN</h1>
+<!-- Carousel -->
+<div id="demo4" class="carousel slide" >
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo4" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo4" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo4" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2F533735099-classic-beauty-essential-kit-wbg.jpg%3Fv%3D1693842178&w=256&q=75" alt="Los Angeles" class="d-block ">
+    </div>
+    <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2F533735099-classic-beauty-essential-kit-wbg.jpg%3Fv%3D1693842178&w=256&q=75" alt="Chicago" class="d-block ">
+    </div>
+    <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0906%2F2558%2Ffiles%2F533735099-classic-beauty-essential-kit-wbg.jpg%3Fv%3D1693842178&w=256&q=75" alt="New York" class="d-block ">
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo4" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo4" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<div align="center"><h1>TOP PICKS OF THE WEEK</h1></div>
+<div class=" mt-3  bg-grey navbar-dark" align="center"  >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div id="demo5" class="carousel slide" >
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo5" data-slide-to="0" class="active"></li>
+    <li data-target="#demo5" data-slide-to="1"></li>
+    <li data-target="#demo5" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner no-padding">
+    <div class="carousel-item active abc">
+      <div class="col-xs-4 col-sm-4 col-md-4 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fcd5c828f-a59f-4342-8955-25c7a9f7c70d.jpg&w=1920&q=75"class="rounded" >
+      </div>    
+      <div class="col-xs-4 col-sm-4 col-md-4 " >
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F8b810378-baea-4a92-a85d-2e4412ad5c4b.jpg&w=1920&q=75"class="rounded">
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fcd3face8-ab3b-4727-a69b-bf2d3fd685b1.jpg&w=1920&q=75"class="rounded">
+      </div>   
+      <!-- <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>    -->
+    </div>
+    <div class="carousel-item abc" >
+      <!-- <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://image.shutterstock.com/z/stock-photo-sleeping-disorders-as-a-reason-for-insomnia-293777093.jpg">
+      </div>     -->
+      <div class="col-xs-4 col-sm-4 col-md-4" >
+        <img   src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fd1e6ecce-05e3-4d2a-82e7-09eba677ce57.jpg&w=1920&q=75"class="rounded">
+      </div>   
+        <div class="col-xs-4 col-sm-4 col-md-4">
+          <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fb9ac964c-f58c-4173-a525-782df6bbaebd.jpg&w=1920&q=75"class="rounded" >
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F442d6f5f-2571-4dc8-9f2a-8a64a521c9c8.jpg&w=1920&q=75"class="rounded" >
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo5" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo5" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+<br>
+<div align="center"><h1>BUY NOW PAY LATER</h1></div>
+<div id="carouselExampleControls" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-1.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-2.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-1.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-2.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/bootstrap-multiple-items-carousel-slide-3-card-1.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-2.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>  
+</div>
+</div>
+  <div align="center"><h1>GIFTING</h1></div>
+<div class=" mt-3  bg-grey navbar-dark" align="center"  >
+  <div id="carouselExampleControls" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/bootstrap-multiple-items-carousel-slide-3-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>  
+</div>
+  </div>
+</div>
+  </div>
+<div  align="center "><h1>REFER YOUR FRIENDS</h1></div>
+<div class=" mt-3">
+   <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F20395dda-05f5-4bdf-8015-a795d7c22678.jpg&w=1080&q=75" class="rounded" style="width:95%; margin-left: 40px;"> 
+</div>
+<div class=" mt-3 bg-secondary navbar-dark" align="center" >
+  <p align="center" class=" bg-secondary navbar-dark"><h1>SUPER SAVERS</h1></p>
+  <div id="carouselExampleControls" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/bootstrap-multiple-items-carousel-slide-3-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>  
+</div>
+  </div>
+</div>
+<div align="center"><h1>NEWLY LAUNCHED</h1></div>
+ <!-- Carousel  -->
+<div id="demo6" class="carousel slide">
+ <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo6" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo6" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo6" data-bs-slide-to="2"></button>
+  </div>
+  
+<!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F7a6f082b-d4ba-4b93-93b7-aa79cc63d877.jpg&w=1920&q=75" alt="Los Angeles" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F0215955b-9b62-43c6-b155-daa98c79427b.gif&w=1920&q=75" alt="Chicago" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F36ceb388-0c68-47be-b39d-c893aa6caed9.jpg&w=1920&q=75" alt="New York" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F3475b8ea-ac02-4974-9557-dbe64dd2439a.gif&w=1920&q=75" alt="New York" class="d-block" style="width:100%">
+    </div>
+  </div>
+  
+   <!-- Left and right controls/icons  -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo6" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo6" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+<div align="center"><h1>THIS OR THAT</h1></div>
+<div class=" mt-3"style="margin: 30px;">
+ <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F13c957b0-79ee-44de-a9bf-ae55e653f82c.jpg&w=1920&q=75" class="float-start rounded" alt="" width="48%" height="40%" > 
+  <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F56fe433a-2039-444d-910a-3fb9f0147743.jpg&w=1920&q=75" class="float-end rounded" alt="" width="48%" height="40%"> 
+</div>
+<br>
+<div class=" mt-3 " align="center" >
+  <p align="center" class=" bg-secondary navbar-dark"><h1>SKINCARE BASICS</h1></p>
+  <div id="carouselExampleControls" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/bootstrap-multiple-items-carousel-slide-3-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>  
+</div>
+  </div>
+ </div>
+<div class=" mt-3 " align="center" >
+  <p align="center" class=" bg-secondary navbar-dark"><h1>SUGAR BEAUTY BLOG</h1></p>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div id="demo7" class="carousel slide" >
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo7" data-slide-to="0" class="active"></li>
+    <li data-target="#demo7" data-slide-to="1"></li>
+    <li data-target="#demo7" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner no-padding">
+    <div class="carousel-item active abc">
+      <div class="col-xs-4 col-sm-4 col-md-4 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F5296b24a-801a-492f-8e2b-9bef361ae3d8.jpg&w=1920&q=75"class="rounded" >
+      </div>    
+      <div class="col-xs-4 col-sm-4 col-md-4 " >
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F31b1a7c0-a45c-4993-9c12-6eaf88b6eb8b.jpg&w=1920&q=75"class="rounded">
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F612c1053-79d9-41f1-97a5-1b993cf11aa2.jpg&w=1920&q=75"class="rounded">
+      </div>   
+     
+    </div>
+    <div class="carousel-item abc" >
+      
+      <div class="col-xs-4 col-sm-4 col-md-4" >
+        <img   src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F387a30ac-2d05-42fa-bc52-95f80109ede3.jpg&w=1920&q=75"class="rounded">
+      </div>   
+        <div class="col-xs-4 col-sm-4 col-md-4">
+          <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F408eb793-bb3c-4da7-9d12-2ef54975c993.jpg&w=1920&q=75"class="rounded" >
+      </div>   
+      <div class="col-xs-4 col-sm-4 col-md-4">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Ffa5f02be-7dd3-4f99-a2c1-d22a4b11d388.jpg&w=1920&q=75"class="rounded" >
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo7" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo7" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>  
+</div>
+ <div class=" mt-3" align="center">
+  <p align="center" class=" bg-secondary navbar-dark"><h1>MERCH STATION</h1></p>  
+  <div id="carouselExampleControls" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="cards-wrapper">
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/bootstrap-multiple-items-carousel-slide-3-card-1.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-2.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="image-wrapper">
+              <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>  
+</div>
+  </div>
+ </div>
+</div>
+<h1 align="center">RECENTLY VIEWED</h1>
+<div id="carouselExampleControls" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="cards-wrapper">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-1.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-2.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-1-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-1.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-2.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-2-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="cards-wrapper">
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/bootstrap-multiple-items-carousel-slide-3-card-1.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-2.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="image-wrapper">
+            <img src="https://codingyaar.com/wp-content/uploads/multiple-items-carousel-slide-3-card-3.jpg" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>  
+</div>
+</div>
+</div>
+ <div class=" mt-3" align="center">
+  <p align="center" class=" bg-secondary navbar-dark"><h1>EXPLORE</h1></p>  
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<div id="demo8" class="carousel slide" >
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo8" data-slide-to="0" class="active"></li>
+    <li data-target="#demo8" data-slide-to="1"></li>
+    <li data-target="#demo8" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner no-padding">
+    <div class="carousel-item active ">
+      <div class="col-xs-3 col-sm-3 col-md-3 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F97722164-55b4-4030-a9f6-0219a9575a24.jpg&w=1920&q=75"class="rounded" >
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F52b4f85e-f9e8-465a-a9a4-6f11e6b407aa.jpg&w=1920&q=75"class="rounded" >
+      </div>    
+      <div class="col-xs-3 col-sm-3 col-md-3 " >
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fa7b72adf-7e02-45c4-a208-552d46eefc4c.jpg&w=1920&q=75"class="rounded">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F88ee8d58-7cc5-450a-953b-aa16ef190d52.jpg&w=1920&q=75"class="rounded">
+      </div>   
+      </div>
+    <div class="carousel-item " >
+      <div class="col-xs-3 col-sm-3 col-md-3" >
+        <img   src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F60bdba27-5962-401b-b03e-2c55baa74bd1.jpg&w=1920&q=75"class="rounded">
+      </div>
+      <div class="col-xs-3 col-sm-3 col-md-3 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F259217a4-239d-4103-8bf7-cd2a7e1529c1.jpg&w=1920&q=75"class="rounded" >
+      </div>       
+        <div class="col-xs-3 col-sm-3 col-md-3">
+          <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F97722164-55b4-4030-a9f6-0219a9575a24.jpg&w=1920&q=75"class="rounded" >
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F52b4f85e-f9e8-465a-a9a4-6f11e6b407aa.jpg&w=1920&q=75"class="rounded" >
+      </div>  
+    </div>
+    <div class="carousel-item ">
+      <div class="col-xs-3 col-sm-3 col-md-3 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2Fa7b72adf-7e02-45c4-a208-552d46eefc4c.jpg&w=1920&q=75"class="rounded" >
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F88ee8d58-7cc5-450a-953b-aa16ef190d52.jpg&w=1920&q=75"class="rounded">
+      </div>   
+      <div class="col-xs-3 col-sm-3 col-md-3">
+        <img  src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F60bdba27-5962-401b-b03e-2c55baa74bd1.jpg&w=1920&q=75"class="rounded">
+      </div> 
+      <div class="col-xs-3 col-sm-3 col-md-3 ">
+        <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fd32baadbbpueqt.cloudfront.net%2FHomepage%2F259217a4-239d-4103-8bf7-cd2a7e1529c1.jpg&w=1920&q=75"class="rounded" >
+      </div>     
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo8" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo8" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+ </div>
+  <a href="" type="" class="btn btn-" data-bs-toggle="collapse" data-bs-target="#demo9">READ MORE SUGAR COSMETICS<a style="color: red;"><</a> </a>
+  <div id="demo9" class="collapse " style="margin-left: 40PX;">
+    <br>
+    So get ready to dive into the world of SUGAR Cosmetics and rule the world, one look at a time!
+   <br>
+   <br>
+    Look your glamorous best with Exclusive SUGAR Makeup Collection!
+    Whether you are a makeup connoisseur or a budding enthusiast, it is easy to be overwhelmed in the sea of beauty products in India. But with SUGAR Cosmetics, you can put your search for the perfect makeup collection to rest. Since its inception, SUGAR has been working with an aim to create a high-quality yet affordable range of products to complement the iconic Indian beauty. Not only that, you can shop for all these cosmetics online without going through a tiring process of finding a cosmetic store that will cater to your needs.
+    <br>
+    <br>
+    Makeup is not just a necessity; it’s a statement that says we are beautiful, but a dash of lipstick every once in a while makes us feel sexy. SUGAR Cosmetics truly keeps up to our promise to have your back to make heads turn wherever you go. Make sure you own a beauty kit with products that are exclusively created and recommended for you by beauty experts, but most of all – own a makeup that makes you feel confident in your own skin. Your selection of cosmetics to build your makeup stash, is sure to provide you with an ensemble that is on-trend and a reflection of you and your style. This makeup collection is everything you need to look stunning while you’re on the go; and you might just fall in love with yourself all over again.
+    <br>
+    <br>
+    How to Choose the Right Makeup & Cosmetics?
+    While we guide you through the best picks to make your makeup kit of this stellar range, here are a few things to keep in mind while choosing the right products for you. Number one, understand your skin texture, skin tone, and skin undertone. For texture – If you have dry skin, opt for crème based, hydrating products like liquid foundations, cushion compacts that are infused with moisturizing ingredients like aloe vera, glycerin and if you have oily skin, pick non-greasy, powder-based makeup that has oil-absorbing ingredients like kaolin clay. SUGAR Cosmetics stands strong to the promise of inclusivity in our makeup range and provides a plethora of shades that suit all skin tones and undertones. While you are spoiled for choice when shopping online at SUGAR Cosmetics with makeup products that are trending, and hues that are raging the makeup charts, never forget to own your style and be unapologetically yourself!
+    <br>
+    <br>
+    SUGAR’s Lipstick Range: Let your lips steal the show!
+    A lipstick is the sassiest makeup product a girl can own. With SUGAR lipsticks, now you can flaunt your pout and grab eyeballs wherever you go. Our lipsticks are rich pigmented and loaded with natural ingredients to ensure your lips are healthy and happy, always. You can now select from various lip makeup products like lip crayons, lacquers, lip gloss and lip liners in matte, creamy matte and glossy finish. With matte lip colours being all the rage, you can shop our delectable range of Matte as Hell crayon lipstick mini set where you can select any 3 lip colours of your choice. In case you are looking for a smudge proof lipstick, our Smudge Me Not liquid lipstick is sure to become your lip’s best friend. Just a single coat and you are done for the day and night too. This kiss-proof range ensures your lips remain gorgeously tainted while you eat, drink and kiss your heart out! Available in 52 shades, this lip line is a riot of colours and choosing one might be tough. With an endless range of lipstick shades and textures to choose from, you are sure to find your perfect SUGAR lipstick for every mood and occasion.
+    <br>
+    <br>
+    To get a smooth application for your lipstick and make it last longer, begin with a lip primer like the SUGAR Seal The Show Lip Primer. Start with defining your pout with the SUGAR Lipping On The Edge Lip Liner that gives you fuller, matte looking lips. There is an abundance of choice for the type of lipstick, the texture and finish that you could choose froin. Opt for a Liquid Lipstick with a super matte finish and long-lasting power like the SUGAR Smudge Me Not Liquid Lipstick, or an easy-to-use crayon lipstick like the SUGAR Matte As Hell Crayon Lipstick with a comfort matte finish that skips the need of a lip liner. You will be showered with choices from a classic bullet lipstick like the SUGAR Nothing Else Matter Longwear Lipstick, to twist up oval-shaped slim bullet lipstick like the SUGAR Matte Attack Transferproof Lipstick ensuring precise and proper application and coverage. You can choose from a super matte texture to a velvety matte feel, and crème, metallic or gloss finish lipsticks from SUGAR’S incredible lip makeup collection. Try the new Wonder Woman Lipsticks that are 100% vegan, and your lipstick shades collection will be incomplete without a classy red and a perfect nude that appropriately complements your skin colour. Other must-have lipstick colours are a popping pink and purple for parties, a soft mauve and pink or earthy browns for an office look or day dates, and some glossy lipstick shades and metallic lipstick colours for the day you want to glam it up. As a beginner, we would recommend your go-to lipstick should definitely be a subtle shade (soft pink or nude brown lipstick colour).
+    <br>
+    <br>
+    SUGAR Eye Makeup range: Check out an exciting collection of kajals, eyeliners & mascaras!
+    With SUGAR’s eye makeup range, you can now play with dramatic eyeliners, deeply tainted Kajals, vibrant eye shadows and much more. If you are looking for a Kajal that actually delivers what it says, our Kohl Of Honour Intense Kajal-01 Blackout black is for you. This extreme-wear, waterproof kajal is smudge free, transfer resistant and stays on for 12 hours straight. Eye makeup is incomplete without an eye liner and the Wingman Waterproof Microliner-01 I’ll be black is a dream come true eyeliner with matte finish. It is smudge proof, deeply pigmented and promises a stay of up to 12 hours. Next try our Blend the Rules Eyeshadow Palette, an iconic trio of warm neutrals to create smokey, mauve and nude effects on your eyes. Finish your eye makeup with Lash Mob Limitless Mascara-01 Black with a Bang. The creamy mascara separates, defines and combs through your lashes giving you that defined long lash look.
+    <br>
+    <br>
+    SUGAR Face Makeup range: One-stop cosmetics shop for a flawless complexion
+    Now, looking like a million bucks is easy with SUGAR’s versatile face makeup range. All you need is long-wear foundations, setting powders and professional makeup brushes and some makeup skills to transform you into a glitzy goddess. Great makeup requires a flawless base and our Ace of Face Foundation Stick stands the test of time. Quite literally! This creamy, rich foundation feels like a second skin and offers 22 different shades for light, medium and dark complexion to match your skin tone. You can shop for these beauty products online and much more like the contour De Force Mini Blush, Dream Cover SPF15 Mattifying Compact and  Bling Leader Illuminating  Moisturiser from our website.
+    <br>
+    <br>
+    Step-by-Step Guide to Ace your Makeup Routine
+    * Prepare yourself to play with makeup and find the look that shouts ‘YOU!’ Take a read through a quick guide to the types of makeup products that you can opt for while shopping online at SUGAR.
+    <br>
+    <br>
+    * Prep: To begin with, always start putting your makeup on a fresh and clean canvas. This means that you should always wash your face and clear out any residue with a good cleansing water or lotion to start right like the SUGAR Swipe Right Cleansing Water. For a true glow-from-within look, make sure you follow this up with a sheet mask that helps your skin feel supple and smooth. Once the face is set, choose from SUGAR’s collection of face primers, which will help keep your makeup in place for a long period of time. A little goes a long way with a pea-sized amount of primer that acts as a skin-perfector, creating the definition of a flawless base whilst blurring out wrinkles and fine lines. According to your skin time, you can choose a mattifying face primer or a hydrating face primer.
+    <br>* Build your makeup routine: Start your face makeup by covering any imperfections, blemishes or skin discolourations by using the SUGAR Magic Wand Waterproof Concealer and the SUGAR Face FWD >> Colour Corrector sticks. Use the two makeup products to cover your under eye dark circles, hyperpigmentation, blemishes, redness, scars and spots. Dot in the product on your face gently and blend in using a light hand. After creating a flawless base, apply your foundation in the shade that’s closest to your skin tone. The best foundation type you could opt for is the foundation cream that comes in a stick format with an attached blending brush at the other end, making it handy and easy to use like the SUGAR Ace Of Face Foundation Stick. After creating your picture-perfect canvas, finish your base by dabbing some compact or loose powder to set it. For those days when you want to go light on your face makeup, simply use a concealer, followed with a BB cream like the SUGAR Goddess Of Flawless SPF30+ BB Cream or SUGARPower Clay SPF20 BB Cushion that suits your skin tone and set it in with the SUGAR Dream Cover SPF15 Mattifying Compact.
+    <br>* Contour and define your features: It’s now time to contour your face, get that perfect chiseled look. Create a defined jawline, highlight your best features and give yourself those flushed cheeks. Use the SUGAR Contour De Force Mini Bronzer or the SUGAR Face FWD >> Contour Stick under your cheekbones to sculpt and define. Apply small amounts of your bronzer along the hollow till your hairline and on the sides of your nose to achieve a defined look. You can also apply it under your jawline for a completely sculpted look. For a brilliant flush of colour use a blush brush and apply the SUGAR Contour De Force Mini Blush to the apples of the cheek. Amp up the shine and glow on your skin by applying the SUGAR Contour De Force Mini Highlighter. Apply your highlighter anywhere you want an intense glow, like the top of your cheekbones, over or under browbones, down the bridge of the nose, on the cupid's bow of your lips and even the inner corner of the eyes.
+    <br>* Flaunt beautiful eye makeup: Now let’s talk about creating an impeccable ‘eye candy’! Start your eye makeup by defining your eyebrow. Use the SUGAR Arch Arrival Brow Definer in the right shade that matches the shade of your eyebrow hair. Define and fill in your eyebrows in short strokes, and then comb them out with the attached brush to achieve naturally groomed or strikingly bold eyebrows. Next, win over your eye game by choosing a richly pigmented and blendable eyeshadow palette that comes with a mirror and dual-ended applicator. Your eye shadow kit should include matte eyeshadow shades in nudes and deeper hues, metallic and foil powders. You can choose any of your fave from the SUGAR Blend The Rules Eyeshadow Palette or the new Wonder Woman eyeshadow palettes that has a mix of matte, shimmer and high-shine foil finish eyeshadow shades and bronzer, blush to add definition. 
+    <br>* Pretty up your nails: Your makeup kit is never complete without a range of nail polish colours. Let your fingers do the talking with SUGAR’s nail polish range called Tip Tac Toe Nail Lacquers that are sure to keep your tips on-point! Choose your favourite nail paint colours from a wide range of glossy, matte or shimmer nail lacquers. The chip-free, streak-free formulation, quick dry formula and specially crafted ergonomic applicator checks on all your nail paint woes. Get experimental and creative with nail polish trends and nail art fads by choosing the best fits for you from our wide range of nail paintcolours. 
+    Buy the best of SUGAR Beauty Kits & Makeup Value sets that are perfect to indulge! 
+    Worried about what to pack for your next summer vacay trip or looking for all-in-one makeup sets to glam for a wedding? Choose from an assemblage of gorgeous beauty kits and makeup combos like the Liquid Lipstick + Kohl Value set and Eyeliner + Kajal Value set or from super saver combo packs like the Lip Crayon value set and Prepped Up Combo face mask sheets. Indulge in glowing skin beauty set or beginner-friendly makeup kit that includes everything for you to look fabulous. Pick our exclusive launch Pride Edition mini lipstick sets in rainbow-themed packaging are all-out bold, loud and bright in every way.
+    <br>
+    <br>
+    SUGAR’s new skincare range: Products that add glow and keep your skin healthy!
+    <br>
+    <br>
+    Makeup looks great when complemented with smooth skin and a natural glow. SUGAR Cosmetics brings for you an exclusive 100% vegetarian and cruelty-free skin care range that will pamper and nourish your skin from within. Grab your SUGAR products from your nearest cosmetic store or order them online in India. From refreshing face masks, illuminating moisturizers, face setting mists and makeup remover, we have it all covered for you. Packed with the goodness of vitamin C, our Citrus Got Real range will cover all your skin concerns like blemishes, dryness and dullness to give you skin that is hydrated, glowing and healthy. For dull, dehydrated and dry skin opt for unique Hyaluronic acid-based skincare packed with great skin loving ingredients. The SUGAR Aquaholic skincare range works magic and provides instant hydration to your skin while relaxing your skin. For those TLC sessions during the weekends, you can choose from a wide range of SUGAR face masks that will rejuvenate your skin.
+    <br>
+    <br>
+    Some skin TLC: Removing your makeup, and continuing with a cleansing, toning and moisturizing routine is mandatory before you retire for the day. This keeps your skin healthy and prevents premature ageing of skin. Use gentle makeup cleansing water to wipe out your waterproof makeup, and then follow the Korean beauty care routine of double cleansing. This means you use an oil-based cleanser to wash your face and clear out any makeup residue, dirt and grime and follow with a gentle water-based face wash after that. Proceed with a toner or facial essence to refine pores and balance skin pH, use a pore cleansing mask and then a rejuvenating Korean sheet mask. Post that you can hydrate your skin using an overnight sleeping face mask. Your perfect picks for a quick skincare routine would be SUGAR Swipe Right Cleansing Water, following with the SUGAR Power Clay 3-min Pore Cleansing Mask or Power Clay Peel Off Mask. You can also use your favourite from SUGAR’s wide range of Sheet Masks. Then end this routine with the SUGAR Aquaholic Overnight Water Mask. This routine helps to avoid clogging of pores and ensures healthy, supple and fresh-looking skin.
+    
+    
+  </div>
+  <div class="foot_merge" style="height: 250px;">
+<div align="center"><h1>LET’S STAY IN TOUCH</h1></div>
+<div align="center"><h3>Get the latest beauty tips straight to your inbox. Can’t wait to connect!</h3></div>
+<div align="center"><input type="email" placeholder="enter your email" align="center"  ><button>subscribe</button></div>
+</div>
+
+  <div class="footer">
+    <div class="log_2">
+      <div class="log_1">
+        <div>
+        <img src="circle-solid.svg" alt="" class="circles_1">
+      </div>
+        <img src="https://in.sugarcosmetics.com/Footer_sugar_icon.svg" alt="" class="circles">
+      </div>
+    </div>
+    <div class="icon">
+      <div><i class="fa-brands fa-facebook fa-2xl" style="color: #e9f1ff;"></i> </div>
+      <div><i class="fa-solid fa-t fa-2xl" style="color: #fafafa;"></i>           </div>          
+      <div><i class="fa-brands fa-youtube fa-2xl" style="color: #fafcff;"></i></div>
+      <div><i class="fa-brands fa-twitter fa-2xl" style="color: #f5f5f5;"></i></div>
+      <div><i class="fa-brands fa-instagram fa-2xl" style="color: #e7eaee;"></i></div>
+      <div><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></div>
+      <div><i class="fa-light fa-p fa-2xl" style="color: #ffffff;"></i></div></div>
+  <div>
+    <hr  style=" height: 2px;color: aliceblue; width: 1400px; margin-left: 50px;" >
+  <div class="  d-flex " style="justify-content: space-evenly; color: aliceblue; font-size: 20px; background-color: black; margin: 0px 200px 0px 200px;">
+     <a href=""style="color: white;">Store</a>
+     <a href=""style="color: white;">Terms&condition</a>
+     <a href=""style="color: white;">Return</a>
+     <a href=""style="color: white;">FAQs</a>
+     <a href=""style="color: white;">About us</a>
+  </div>
+  <hr style=" height: 2px;color: aliceblue; width: 1400px; margin-left: 50px;">
+  <div class="  d-flex " style="justify-content: space-evenly; color: aliceblue; font-size: 20px; gap: 30px; background-color: black; margin: 0px 50px 0px 50px;">
+  <div >GET IN TOUCH <br>
+    Call us at <br>
+    <a href=""style="color: rgb(164, 156, 156);">1800-209-9933</a> <br>
+    Monday to Friday : 9 AM to 7 PM
+    </div>
+   <div>
+    <br>
+    <br>
+     Support <br>
+    <a href=""style="color: rgb(164, 156, 156);">hello@sugarcosmetics.com</a>
+  </div>
+  <div>
+    <br>
+    <br>
+    Careers <br>
+   <a href="" style="color: rgb(164, 156, 156);"> We're hiring!</a>
+  </div>
+  <div>
+    <br>
+    <br>
+    <a href=""style="color: rgb(164, 156, 156);">Press & Media <br>
+    pr@sugarcosmetics.com</a>
+  </div>
+  <div>
+    <br>
+    <br>
+   <a href=""style="color: rgb(164, 156, 156);"> Influencer Collab <br>
+    Join Us</a>
+  </div>
+</div>
+<hr style=" height: 2px;color: aliceblue;width: 1400px; margin-left:50px;">
+<div class="d-flex" style="justify-content: center; background-color: black; color: aliceblue; height: 100px;gap: 30px;">
+  <div><br>GET THE NEW SUGAR APP TODAY! <p style="color: rgb(164, 156, 156);">
+    Tap into a better shopping experience.
+  </div>
+    <div><br><img src="https://in.sugarcosmetics.com/playstore.png" alt="" style="height: 50px;">
+    </div>
+    <div><br><img src="https://in.sugarcosmetics.com/apple-store.png" alt=""style="height: 50px;">
+    </div>
+</div>
+<!-- <br style="height: 20px;"> -->
+<div align="center" style=" height: 100px;background-color: black; color: aliceblue;font-size: 14px;">
+<hr style=" height: 2px;color: aliceblue; ">
+ <p style="color: rgb(164, 156, 156);"> Copyright © 2023 SUGAR Cosmetics. All rights reserved
+</div>
+</div>
+</div>
+
+</body>
+</html>
