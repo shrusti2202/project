@@ -1,0 +1,27 @@
+/* header responsive */
+/* Media queries */
+/* header responsive */
+/* Media queries */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .search_input{
+        display: none;
+    }
+    .account_login{
+        display: none;
+    }
+    .main_header {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile_menu{
+        display: none;
+    }
+}
+

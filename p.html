@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+           @media screen and (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .search_input{
+        display: none;
+    }
+    .account_login{
+        display: none;
+    }
+    .main_header {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile_menu{
+        display: none;
+    }
+}
+.header {
+     background: #000;
+     /* padding: 5px; */
+   }
+   .main_header {
+     display: flex;
+     justify-content: space-around;
+     padding: 5px;
+     align-items: center;
+   }
+   h1 {
+     color: white;
+   }
+   .search_input {
+     display: flex;
+     width: 40%;
+   }
+   input {
+     width: 70%;
+     padding: 6px;
+     border-radius: 7px 0px 0px 7px;
+     border: none;
+     background-color: #212121;
+     outline: none;
+   }
+   .search_btn {
+     padding-left: 10px;
+     background: white;
+     border-radius: 0px 7px 7px 0px;
+     border: none;
+     border-left: 1px solid;
+     padding: 6px;
+   }
+   .account_login {
+     display: flex;
+     color: white;
+     align-items: center;
+   }
+   .user_login {
+     display: flex;
+     padding-left: 10px;
+   }
+   .user_login p {
+     margin-bottom: 0px;
+     align-items: center;
+   }
+   .cart_section {
+     display: flex;
+     color: white;
+     gap: 15px;
+   }
+   /* -------------------- header css end --------------------  */
+   /* mobile menu */
+   .mobile_menu {
+     color: #fff;
+     cursor: pointer;
+   }
+   /* -------------------- Navbar css start --------------------  */
+   .navbar {
+     background: #141414;
+   }
+   .nav_link {
+     padding: 8px;
+   }
+   .nav_link .nav_item {
+     display: flex;
+     list-style: none;
+     gap: 30px;
+     margin-bottom: 0;
+   }
+   .navbar_item a {
+     color: white !important;
+     list-style: none;
+     text-decoration: none;
+     position: relative;
+     height: 53px;
+     white-space: nowrap;
+     transform-origin: bottom right;
+     transition: transform 0.25s ease-out;
+     text-decoration: none;
+   }
+   .navbar_item a::after {
+     content: "";
+     position: absolute;
+     width: 100%;
+     transform: scaleX(0);
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     top: 35px;
+     transform-origin: bottom right;
+     transition: transform 0.55s ease-out;
+   }
+   .navbar_item a:hover::after {
+     color: red;
+     border-bottom: 3px solid red;
+     transform: scaleX(1);
+     transform-origin: bottom left;
+   }
+   /* -==============================================******************** */
+   
+   .nav_item li:hover .drop-menu,
+   .nav_item li:hover .mega-box {
+     transition: all 0.3s ease;
+     top: 53px;
+     opacity: 1;
+     visibility: visible;
+   }
+   .drop-menu li a {
+     width: 100%;
+     display: block;
+     padding: 0 0 0 15px;
+     font-weight: 400;
+     border-radius: 0px;
+   }
+   
+   .mega-box {
+     position: absolute;
+     /* left: 0; */
+     width: 33;
+     /* padding: 0 90px; */
+     top: 85px;
+     opacity: 0;
+     z-index: 1;
+     visibility: hidden;
+     background-color: #fff;
+     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+     overflow-y: auto;
+     max-height: 300px;
+   }
+   .nav_link ul li {
+     color: #000 !important;
+     text-decoration: none;
+     list-style: none;
+   }
+   .mega-box .content {
+     /* padding: 10px 0px; */
+     display: flex;
+     width: 100%;
+     justify-content: space-around;
+     align-items: flex-start;
+   }
+   
+   /* .mega-box .content.content_sub {
+     padding: 14px 20px;
+     justify-content: space-between;
+   } */
+   
+   .mega-box .content .row {
+     /* width: calc(50% - 401px); */
+     line-height: 29px;
+     width: 24%;
+     flex-direction: column;
+   }
+   .content .content_sub ul li a {
+     text-decoration: none;
+     list-style: none;
+   }
+      .women1{
+         margin-left: 50px;
+    }
+   .Category{
+    padding-left: 10px;
+    width: 250px;
+   }
+   .Reset{
+    color: red;
+    margin-left: 100px;
+   }
+   .submenu{
+    margin: 20px;
+    display: inline-block;
+}
+hr{
+  align-items: center;
+  width: 200px;
+}
+.circles {
+                height:100px;
+                width:200px;
+                /* background-color: black; */
+                /* padding:13px 0px 10px 0px; */
+                /* border-radius: 50%; */
+               position: relative;
+               /* background-color: black; */
+               margin-left: 46.5%;
+               margin-top: -45px;
+              padding: 5px;
+              
+              }
+              .foot_merge
+              {
+                position: relative;
+              }
+
+              .footer{
+                width: 100%;
+                background-color: black;
+                position: relative;
+                margin-top: 0px;
+                padding-top: 0px;
+              }
+              .circles_1{
+                height: 140px;
+                width: 240px;
+                position:absolute;
+                margin-left: 45%;
+                margin-top: -70px;
+              }
+              .log_2{
+                height: 200px;
+                background-color: black;
+                position: relative;
+              }
+              .icon{
+                margin:0px 500px 0px 500px;
+                display: flex;
+                justify-content: space-evenly;
+              }
+              .blur{
+                /* position: absolute; */
+                height: 300px;
+                width: 100%;
+                background-image: url(https://d32baadbbpueqt.cloudfront.net/Collection/9a4a8e9f-4858-4a29-9e4e-d116a7c5b3b3.jpg);
+                background-size: cover;
+                background-position: center;
+                filter: blur(10px);
+              }
+              .pic{
+                /* position: absolute; */
+                height: 150px;
+                background-image: url(https://d32baadbbpueqt.cloudfront.net/Collection/9a4a8e9f-4858-4a29-9e4e-d116a7c5b3b3.jpg);
+                width: 50%;
+              }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="main_header container-fluid">
+      <!-- mobile view -->
+      <div class="mobile_menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="main_logo">
+         <a href="/"><svg width="1em" height="1em" viewBox="0 0 98 29" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="height: 28px; width: 98px;"><path fill="url(#SugarLogo_svg__a)" d="M.14.52h97.72v27.92H.14z"></path><defs><pattern id="SugarLogo_svg__a" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#SugarLogo_svg__b" transform="matrix(.00151 0 0 .0053 0 0)"></use></pattern><image id="SugarLogo_svg__b" width="661" height="189" xlink:href="data:image/png;base64,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"></image></defs></svg></a>
+         
+        
+      </div>
+      <div class="search_input">
+        <input
+          type="text"
+          class="input"
+          placeholder="Try 'Liquid Lipstick'"
+        />
+        <button class="search_btn" type="button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          search
+        </button>
+      </div>
+      <div class="account_login">
+        <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+       <a href="loggin.html"> <div class="user_login">
+          <p>Login/</p>
+          <p>Register</p>
+        </div>
+      </a>
+      </div>
+      <div class="cart_section">
+               <a class="" href=""><i class="fa-regular fa-heart" style="color: #f5f7f9; margin: 0px 50px 0px 50px;"></i></a>
+                 <a href=""><i class="fa-solid fa-bag-shopping" style="color: #e9eaec; margin: 0px 50px 0px 0px;"></i></a></a>
+                <a class=" " href=""> <i class="fa-solid fa-certificate" style="color: #f4f7fa; margin: 0px 50px 0px 0px;"></i></a>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="nav_link">
+        <ul class="nav_item">
+          <li class="mega_box_text">
+            <div class="navbar_item">
+              <a href="p.html">LIPS</a>
+            </div>
+            <div class="mega-box">
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="">
+                      <li style="font-weight: bold ;">LIPSTICK</li>
+                      <li>TRANSFER PROOF LIPSTICKS</li>
+                      <li>MATTE LIPSTICKS</li>
+                      <li>LIQUID LIPSTICKS</li>
+                      <li>CRAYON LIPSTICKS</li>
+                      <li>POWDER LIPSTICKS</li>
+                      <li>SATIN LIPSTICKS</li>
+                      <li>BULLET LIPSTICKS</li>
+                      <li>LIP GLOSS & LINERS</li>                      
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-process">
+                      <li style="font-weight: bold; font-size: 15px;">LIP CARE</li>
+                      <li>LIPSTICK FIXERS & REMOVERS</li>
+                      <li>LIP PRIMERS & SCRUBS</li>
+                      <li>LIP BALMS</li>
+                      
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-team">
+                      <li style="font-weight: bold; font-size: 15px;">LIPSTICK SETS & COMBOS</li>
+                      <li>LIPSTICK SETS</li>
+                      <li>LIPSTICK COMBOS</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="mega_box_text">
+              <div class="navbar_item">
+                <a href="">EYES</a>
+              </div>
+              <div class="mega-box">
+                <div class="content content_sub">
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="">
+                        <li style="font-weight: bold; font-size: 15px;">KOHL & KAJAL</li>
+                        <li>KOHLS</li>
+                        <li>KAJALS</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/our-process">
+                        <li style="font-weight: bold; font-size: 15px;">EYELINER</li>
+                        <li>LIQUID EYELINERS</li>
+                        <li>GEL EYELINERS</li>
+                        <li>PEN EYELINERS</li>
+                        <li>MAGNETIC EYELASHES</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/our-team">
+                        <li style="font-weight: bold; font-size: 15px;">EYEBROW</li>
+                        <li>BROW DEFINER</li>
+                        <li>BROW PEN</li>
+                        <li>BROW PENCIL</li>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="content content_sub">
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/testimonial">
+                        <li style="font-weight: bold; font-size: 15px;">MASCARA</li>
+                        <li>VOLUMIZING MASCARA</li>
+                        <li>CURL LENGTHENING MASCARA</li>
+                       
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/careers">
+                        <li style="font-weight: bold; font-size: 15px;">EYESHADOWS</li>
+                        <li>EYESHADOW PALETTES</li>
+                        <li>JELLY EYESHADOW</li>
+                        <li>LIQUID EYESHADOW</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/life-at-tai">
+                        <li style="font-weight: bold; font-size: 15px;">EYE VALUE SETS</li>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="mega_box_text">
+              <div class="navbar_item">
+                <a href="">FACE</a>
+              </div>
+              <div class="mega-box">
+                <div class="content content_sub">
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="">
+                        <li style="font-weight: bold; font-size: 15px;">FOUNDATION & BB CREAM</li>
+                        <li>STICK FOUNDATION</li>
+                        <li>LIQUID FOUNDATION</li>
+                        <li>BB CREAM</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/our-process">
+                        <li style="font-weight: bold; font-size: 15px;">PALETTES</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/our-team">
+                        <li  style="font-weight: bold; font-size: 15px;">PRIMER
+                          TRANSLU</li>
+                          <li>TRANSLUCENT PRIMERS</li>
+                          <li>TINTED PRIMERS</li>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="content content_sub">
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/testimonial">
+                        <li  style="font-weight: bold; font-size: 15px;">COMPACT & FIXERS</li>
+                        <li>SETTING SPRAYS</li>
+                        <li>LOOSE POWDER</li>
+                        <li>COMPACT</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/careers">
+                        <li style="font-weight: bold; font-size: 15px;">CONCEALERS & CORRECTORS</li>
+                        <li>COLOUR CORRECTORS</li>
+                        <li>CONCEALER</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/life-at-tai">
+                        <li style="font-weight: bold; font-size: 15px;">HIGHLIGHTERS</li>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
+                <div class="content content_sub">
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/testimonial">
+                        <li style="font-weight: bold; font-size: 15px;">BLUSH</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/careers">
+                        <li style="font-weight: bold; font-size: 15px;">BRONZER & CONTOUR</li>
+                      </a>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <ul class="mega-links">
+                      <a href="/life-at-tai">
+                        <li style="font-weight: bold; font-size: 15px;">FACE SETS & COMBOS</li>
+                      </a>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </li>
+          <div class="navbar_item"><a href="">NAILS</a></div>
+          <li class="mega_box_text">
+            <div class="navbar_item">
+              <a href="">SKINCARE</a>
+            </div>
+            <div class="mega-box">
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="">
+                      <li style="font-weight: bold; font-size: 13px;">MOISTURIZERS & SUNSCREENS </li>
+                      <li>MOISTURIZERS</li>
+                      <li>SUNSCREENS</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-process">
+                      <li style="font-weight: bold; font-size: 13px;">MASKS & SERUMS</li>
+                      <li>MASKS</li>
+                      <li>SERUMS</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-team">
+                      <li style="font-weight: bold; font-size: 13px;">CLEANSERS & EXFOLIATOR</li>
+                      <li>CLEANSERS</li>
+                      <li>EXFOLIATORS</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/testimonial">
+                      <li style="font-weight: bold; font-size: 13px;">MISTS & HYDRATING STICKS</li>
+                      <li>FACE MISTS</li>
+                      <li>COOLING STICKS</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/careers">
+                      <li style="font-weight: bold; font-size: 13px;">LIP & EYE CARE</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/life-at-tai">
+                      <li style="font-weight: bold; font-size: 13px;">SKINCARE SETS & COMBOS</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/testimonial">
+                      <li style="font-weight: bold; font-size: 13px;">SKINCARE RANGES</li>
+                      <li>AQUAHOLIC</li>
+                      <li>COFFEE CULTURE</li>
+                      <li>CITRUS GOT REAL</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/careers">
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/life-at-tai">
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="mega_box_text">
+            <div class="navbar_item">
+              <a href="">ACCESSORIES</a>
+            </div>
+            <div class="mega-box">
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="">
+                      <li style="font-weight: bold; font-size: 13px;">BRUSHES</li>
+                      <li>FACE BRUSHES</li>
+                      <li>EYE BRUSHES</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/life-at-tai">
+                      <li style="font-weight: bold; font-size: 13px;">MAKEUP TOOLS</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="mega_box_text">
+            <div class="navbar_item">
+              <a href="">GIFTS&KITS</a>
+            </div>
+            <div class="mega-box">
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="">
+                      <li style="font-weight: bold; font-size: 13px;">LIPSTICK SETS</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-process">
+                      <li style="font-weight: bold; font-size: 13px;">MAKEUP KITS</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-team">
+                      <li style="font-weight: bold; font-size: 13px;">SKINCARE SETS</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/testimonial">
+                      <li style="font-weight: bold; font-size: 13px;">SUGAR MERCH</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/careers">
+                      <li style="font-weight: bold; font-size: 13px;">CORPORATE GIFTING
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/life-at-tai">
+                      <li style="font-weight: bold; font-size: 13px;">E-GIFT CARD</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/testimonial">
+                      <li style="font-weight: bold; font-size: 13px;">VALUE SETS</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/careers">
+                      <li style="font-weight: bold; font-size: 13px;">SUGAR SETS
+                      </li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <div class="navbar_item"><a href="">BESTSELLERS</a></div>
+          <div class="navbar_item"><a href="">NEW LAUNCHEDS</a></div>
+          <div class="navbar_item"><a href="offers.html">OFFERS</a></div>
+          <li class="mega_box_text">
+            <div class="navbar_item">
+              <a href="">BLOGS</a>
+            </div>
+            <div class="mega-box">
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="">
+                      <li style="font-weight: bold; font-size: 13px;">MAKEUP</li>
+                      <li>FACE</li>
+                      <li>EYES</li>
+                      <li>LIPS</li>
+                      <li>BRIDES</li>
+                      <li>NAILS</li>
+                      <li>HOW TO'S</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-process">
+                      <li style="font-weight: bold; font-size: 13px;">SKIN</li>
+                      <li>SKIN TYPE</li>
+                      <li>SKIN CONCERNS</li>
+                      <li>HOME REMEDIES & DIYs</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/our-team">
+                      <li style="font-weight: bold; font-size: 13px;">HAIR</li>
+                      <li>HAIR CARE</li>
+                      <li>HAIR STYLING</li>
+                      <li>HAIR COLOUR</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+              <div class="content content_sub">
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/testimonial">
+                      <li style="font-weight: bold; font-size: 13px;">LIFESTYLE</li>
+                      <li>HEALTH & WELLNESS</li>
+                      <li>RELATIONSHIPS</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/careers">
+                      <li>FASHION</li>
+                      <li>TRENDS</li>
+                      <li>CELEBRITIES</li>
+                    </a>
+                  </ul>
+                </div>
+                <div class="row">
+                  <ul class="mega-links">
+                    <a href="/life-at-tai">
+                      <li style="font-weight: bold; font-size: 13px;">QUIZ</li>
+                    </a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <div class="navbar_item"><a href="">STORS</a></div>
+        </ul>
+      </div>
+    </nav>
+  </header>  
+ <div class="blur">
+ 
+  </div>
+  
+  
+
+<div class="women" style="margin-top: 50px; width: 300px; " >
+    <div class="women1"style="background-size: 400px;">
+      <nav class="sidebar card py-2 mb-4">
+        <div class="container mt-3" >
+                                         
+
+           
+          <button type="button" class="btn  dropdown-toggle" data-bs-toggle="dropdown"  style="border: solid 2px black; width: 230px; font-size: 12px; ">
+         short by:popularity:bestseller </button>
+          <div class="dropdown-menu">
+              <div class="Category">
+            <p><input type="checkbox" name="" id="">price:High to low</p>
+            <p><input type="checkbox" name="" id="">price :low to high</p>
+            <p><input type="checkbox" name="" id="">popularity:customers top rated</p>
+            <p><input type="checkbox" name="" id="">popularity:bestsellers</p>
+          </div>
+      </div>
+      </div><br><br>
+          
+        
+        <ul class="nav flex-column" id="nav_accordion">
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#"> </a>
+          </li> -->
+          <li class="nav-item has-submenu">
+            <a href="" >Filters <a href="" class="Reset">Reset</a></a>
+           
+          </li>
+          <hr>
+          <li class="nav-item has-submenu">
+            <a class="nav-link" href="#" class="dropdown-toggle1" data-bs-toggle="dropdown"> Category </a>
+            <div class="dropdown-menu">
+                <div class="submenu">
+                <p><input type="checkbox" name="" id="">Lipsticks</p>
+                <p><input type="checkbox" name="" id="">lip Primers</p>
+                <p><input type="checkbox" name="" id="">lip Fixers</p>
+                <p><input type="checkbox" name="" id="">lip Balm</p>
+            </div>
+        </div>
+        <hr>
+          </li>
+          <li class="nav-item has-submenu">
+            <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> price  </a>
+            <div class="dropdown-menu">
+                <div class="submenu">
+                <p><input type="checkbox" name="" id="">₹0-₹299</p>
+                <p><input type="checkbox" name="" id="">₹300-₹499</p>
+                <p><input type="checkbox" name="" id="">₹500-₹899</p>
+                <p><input type="checkbox" name="" id="">₹900+</p>
+            </div>
+          </li>
+          <hr>
+          <li class="nav-item has-submenu">
+            <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> Discount  </a>
+            <div class="dropdown-menu">
+                <div class="submenu">
+                <p><input type="checkbox" name="" id="">10% and above</p>
+                <p><input type="checkbox" name="" id="">20% and above</p>
+                <p><input type="checkbox" name="" id="">30% amd above</p>
+                <p><input type="checkbox" name="" id="">40% and above</p>
+            </div>
+              </li>
+              <hr>
+                <li class="nav-item has-submenu">
+              <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> colour  </a>
+              <div class="dropdown-menu">
+                  <div class="colour d-flex" >
+                    <div class="checkbox" >
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 18px;"></div>
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 13px;"></div>
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 12px;"></div>
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 12px;"></div>
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 13px;"></div>
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 13px;"></div>
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 12px;"></div>
+                      <div> <input type="checkbox" name="" id="" style="margin-left: 20px; margin-top: 12px;"></div>
+                    </div>
+                    <div class="shades">
+                  <p><a href=""><div style="background-color: rgb(227, 188, 154); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219); margin-left: 20px;"></div></a></p>
+                  <p><a href=""><div style="background-color: rgb(255, 229, 180); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219);margin-left: 20px;"></div></a></p>
+                  <p><a href=""><div style="background-color: rgb(255, 192, 203); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219);margin-left: 20px;"></div></a></p>
+                  <p><a href=""><div style="background-color: rgb(255, 0, 0); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219);margin-left: 20px;"></div></a></p>
+                  <p><a href=""><div style="background-color: rgb(114, 47, 55); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219);margin-left: 20px;"></div></a></p>
+                  <p><a href=""><div style="background-color: rgb(128, 0, 0); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219);margin-left: 20px;"></div></a></p>
+                  <p><a href=""><div style="background-color: rgb(160, 32, 240); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219);margin-left: 20px;"></div></a></p>
+                  <p><a href=""><div style="background-color: rgb(224, 176, 255); height: 15px; width: 15px; border-radius: 4px; border: 1px solid rgb(219, 219, 219);margin-left: 20px;"></div></a></p>
+                </div>
+                <div class="name" > 
+                  <p style="margin-top: 10px;  margin-left:20px"><a href="">nude</p>  </a>
+                  <p style="margin-top: -10px; margin-left:20px"><a href="">peach</p></a>
+                  <p style="margin-top: -10px; margin-left:20px"><a href="">pink</p></a>
+                  <p style="margin-top: -10px; margin-left:20px"><a href="">red</p></a>
+                  <p style="margin-top: -10px; margin-left:20px"><a href="">wine</p></a>
+                  <p style="margin-top: -10px; margin-left:20px"><a href="">maroon</p></a>
+                  <p style="margin-top: -10px; margin-left:20px"><a href="">purple</p></a>
+                  <p style="margin-top: -5px;  margin-left:20px"><a href="">mauva</p></a>
+                </div>
+              </div>
+            </li>
+            <hr>
+          <li class="nav-item has-submenu">
+            <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> finish  </a>
+            <div class="dropdown-menu">
+                <div class="submenu">
+                <p><input type="checkbox" name="" id="">matte</p>
+                <p><input type="checkbox" name="" id="">creme</p>
+                <p><input type="checkbox" name="" id="">natural</p>
+                <p><input type="checkbox" name="" id="">satin</p>
+                <p><input type="checkbox" name="" id="">glossy</p>
+            </div>
+              </li>
+              <hr>
+              <li class="nav-item has-submenu">
+                <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> skin tone  </a>
+                <div class="dropdown-menu">
+                    <div class="submenu">
+                    <p><input type="checkbox" name="" id="">deep</p>
+                    <p><input type="checkbox" name="" id="">light/fair</p>
+                    <p><input type="checkbox" name="" id="">medium</p>
+                </div>
+                  </li>
+                  <hr>
+                  <li class="nav-item has-submenu">
+                    <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> formulation  </a>
+                    <div class="dropdown-menu">
+                        <div class="submenu">
+                        <p><input type="checkbox" name="" id="">bullet/stick</p>
+                        <p><input type="checkbox" name="" id="">creamy</p>
+                        <p><input type="checkbox" name="" id="">crayon/pencil/stick</p>
+                        <p><input type="checkbox" name="" id="">liquid</p>
+                        <p><input type="checkbox" name="" id="">gel</p>
+                        <p><input type="checkbox" name="" id="">cream</p>
+                        <p><input type="checkbox" name="" id="">powder</p>
+                        <p><input type="checkbox" name="" id="">mousse</p>
+                    </div>
+                      </li>
+                      <hr>
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> ease of use  </a>
+                        <div class="dropdown-menu">
+                            <div class="submenu">
+                            <p><input type="checkbox" name="" id="">advanced</p>
+                            <p><input type="checkbox" name="" id="">beginner</p>                                 </div>
+                          </li>
+                          <hr>
+          <li class="nav-item has-submenu">
+                    <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> benefits  </a>
+                    <div class="dropdown-menu">
+                        <div class="submenu">
+                       <p><input type="checkbox" name="" id="">curelty free</p>
+                       <p><input type="checkbox" name="" id="">transfer-proof</p>
+                       <p><input type="checkbox" name="" id="">water resistant</p>
+                       <p><input type="checkbox" name="" id="">vegan</p>
+                       <p><input type="checkbox" name="" id="">long-lasting</p>
+                       <p><input type="checkbox" name="" id="">long lasting</p>
+                    </div>
+                      </li>
+                      <hr>
+                      <li class="nav-item has-submenu">
+                        <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> pack size  </a>
+                        <div class="dropdown-menu">
+                            <div class="submenu">
+                           <p><input type="checkbox" name="" id="">single</p>
+                           </div>
+                          </li>
+                          <hr>
+                          <li class="nav-item has-submenu">
+                            <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> claims  </a>
+                            <div class="dropdown-menu">
+                                <div class="submenu">
+                               <p><input type="checkbox" name="" id="">vegan</p>
+                               <p><input type="checkbox" name="" id="">vegetarian</p>
+                               <p><input type="checkbox" name="" id="">cruelty free</p>
+                               
+                            </div>
+                              </li>
+                              <hr>
+                              <li class="nav-item has-submenu">
+                                <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown"> occasion/mood  </a>
+                                <div class="dropdown-menu">
+                                    <div class="submenu">
+                                   <p><input type="checkbox" name="" id="">festive</p>
+                                   <p><input type="checkbox" name="" id="">office</p>
+                                   <p><input type="checkbox" name="" id="">party</p>
+                                   <p><input type="checkbox" name="" id="">everyday</p>
+                                   <p><input type="checkbox" name="" id="">bold</p>
+                                   <p><input type="checkbox" name="" id="">work</p>
+                                </div>
+                                  </li>
+                                  <hr>
+                                  <li class="nav-item has-submenu">
+                                    <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown">by usage   </a>
+                                    <div class="dropdown-menu">
+                                        <div class="submenu">
+                                       <p><input type="checkbox" name="" id="">exfoliating</p>
+                                       <p><input type="checkbox" name="" id="">refreshing/rejuvenating</p>
+                                        </div>
+                                      </li>
+                                      <hr><li class="nav-item has-submenu">
+                                        <a class="nav-link" href="#"class="dropdown-toggle1" data-bs-toggle="dropdown">hero ingredient   </a>
+                                        <div class="dropdown-menu">
+                                            <div class="submenu">
+                                           <p><input type="checkbox" name="" id="">vitamin e</p>
+                                           <p><input type="checkbox" name="" id="">vitamin c</p>
+                                           <p><input type="checkbox" name="" id="">coffee</p>
+                                            </div>
+                                          </li>
+                                          <hr>
+                                      
+        </ul> 
+        </nav>
+      </div>
+    <div class="women2">
+
+    </div>
+  </div>
+  <div style="background-image: url(https://img.freepik.com/free-vector/white-abstract-background_23-2148817571.jpg); background-size: cover; background-repeat: no-repeat;">
+  <a href="" type="" class="btn btn-" data-bs-toggle="collapse" data-bs-target="#demo9">READ MORE SUGAR COSMETICS<a style="color: red;">></a> </a>
+  <div id="demo9" class="collapse " style="margin-left: 40PX;">
+    <br>
+    So get ready to dive into the world of SUGAR Cosmetics and rule the world, one look at a time!
+   <br>
+   <br>
+    Look your glamorous best with Exclusive SUGAR Makeup Collection!
+    Whether you are a makeup connoisseur or a budding enthusiast, it is easy to be overwhelmed in the sea of beauty products in India. But with SUGAR Cosmetics, you can put your search for the perfect makeup collection to rest. Since its inception, SUGAR has been working with an aim to create a high-quality yet affordable range of products to complement the iconic Indian beauty. Not only that, you can shop for all these cosmetics online without going through a tiring process of finding a cosmetic store that will cater to your needs.
+    <br>
+    <br>
+    Makeup is not just a necessity; it’s a statement that says we are beautiful, but a dash of lipstick every once in a while makes us feel sexy. SUGAR Cosmetics truly keeps up to our promise to have your back to make heads turn wherever you go. Make sure you own a beauty kit with products that are exclusively created and recommended for you by beauty experts, but most of all – own a makeup that makes you feel confident in your own skin. Your selection of cosmetics to build your makeup stash, is sure to provide you with an ensemble that is on-trend and a reflection of you and your style. This makeup collection is everything you need to look stunning while you’re on the go; and you might just fall in love with yourself all over again.
+    <br>
+    <br>
+    How to Choose the Right Makeup & Cosmetics?
+    While we guide you through the best picks to make your makeup kit of this stellar range, here are a few things to keep in mind while choosing the right products for you. Number one, understand your skin texture, skin tone, and skin undertone. For texture – If you have dry skin, opt for crème based, hydrating products like liquid foundations, cushion compacts that are infused with moisturizing ingredients like aloe vera, glycerin and if you have oily skin, pick non-greasy, powder-based makeup that has oil-absorbing ingredients like kaolin clay. SUGAR Cosmetics stands strong to the promise of inclusivity in our makeup range and provides a plethora of shades that suit all skin tones and undertones. While you are spoiled for choice when shopping online at SUGAR Cosmetics with makeup products that are trending, and hues that are raging the makeup charts, never forget to own your style and be unapologetically yourself!
+    <br>
+    <br>
+    SUGAR’s Lipstick Range: Let your lips steal the show!
+    A lipstick is the sassiest makeup product a girl can own. With SUGAR lipsticks, now you can flaunt your pout and grab eyeballs wherever you go. Our lipsticks are rich pigmented and loaded with natural ingredients to ensure your lips are healthy and happy, always. You can now select from various lip makeup products like lip crayons, lacquers, lip gloss and lip liners in matte, creamy matte and glossy finish. With matte lip colours being all the rage, you can shop our delectable range of Matte as Hell crayon lipstick mini set where you can select any 3 lip colours of your choice. In case you are looking for a smudge proof lipstick, our Smudge Me Not liquid lipstick is sure to become your lip’s best friend. Just a single coat and you are done for the day and night too. This kiss-proof range ensures your lips remain gorgeously tainted while you eat, drink and kiss your heart out! Available in 52 shades, this lip line is a riot of colours and choosing one might be tough. With an endless range of lipstick shades and textures to choose from, you are sure to find your perfect SUGAR lipstick for every mood and occasion.
+    <br>
+    <br>
+    To get a smooth application for your lipstick and make it last longer, begin with a lip primer like the SUGAR Seal The Show Lip Primer. Start with defining your pout with the SUGAR Lipping On The Edge Lip Liner that gives you fuller, matte looking lips. There is an abundance of choice for the type of lipstick, the texture and finish that you could choose froin. Opt for a Liquid Lipstick with a super matte finish and long-lasting power like the SUGAR Smudge Me Not Liquid Lipstick, or an easy-to-use crayon lipstick like the SUGAR Matte As Hell Crayon Lipstick with a comfort matte finish that skips the need of a lip liner. You will be showered with choices from a classic bullet lipstick like the SUGAR Nothing Else Matter Longwear Lipstick, to twist up oval-shaped slim bullet lipstick like the SUGAR Matte Attack Transferproof Lipstick ensuring precise and proper application and coverage. You can choose from a super matte texture to a velvety matte feel, and crème, metallic or gloss finish lipsticks from SUGAR’S incredible lip makeup collection. Try the new Wonder Woman Lipsticks that are 100% vegan, and your lipstick shades collection will be incomplete without a classy red and a perfect nude that appropriately complements your skin colour. Other must-have lipstick colours are a popping pink and purple for parties, a soft mauve and pink or earthy browns for an office look or day dates, and some glossy lipstick shades and metallic lipstick colours for the day you want to glam it up. As a beginner, we would recommend your go-to lipstick should definitely be a subtle shade (soft pink or nude brown lipstick colour).
+    <br>
+    <br>
+    SUGAR Eye Makeup range: Check out an exciting collection of kajals, eyeliners & mascaras!
+    With SUGAR’s eye makeup range, you can now play with dramatic eyeliners, deeply tainted Kajals, vibrant eye shadows and much more. If you are looking for a Kajal that actually delivers what it says, our Kohl Of Honour Intense Kajal-01 Blackout black is for you. This extreme-wear, waterproof kajal is smudge free, transfer resistant and stays on for 12 hours straight. Eye makeup is incomplete without an eye liner and the Wingman Waterproof Microliner-01 I’ll be black is a dream come true eyeliner with matte finish. It is smudge proof, deeply pigmented and promises a stay of up to 12 hours. Next try our Blend the Rules Eyeshadow Palette, an iconic trio of warm neutrals to create smokey, mauve and nude effects on your eyes. Finish your eye makeup with Lash Mob Limitless Mascara-01 Black with a Bang. The creamy mascara separates, defines and combs through your lashes giving you that defined long lash look.
+    <br>
+    <br>
+    SUGAR Face Makeup range: One-stop cosmetics shop for a flawless complexion
+    Now, looking like a million bucks is easy with SUGAR’s versatile face makeup range. All you need is long-wear foundations, setting powders and professional makeup brushes and some makeup skills to transform you into a glitzy goddess. Great makeup requires a flawless base and our Ace of Face Foundation Stick stands the test of time. Quite literally! This creamy, rich foundation feels like a second skin and offers 22 different shades for light, medium and dark complexion to match your skin tone. You can shop for these beauty products online and much more like the contour De Force Mini Blush, Dream Cover SPF15 Mattifying Compact and  Bling Leader Illuminating  Moisturiser from our website.
+    <br>
+    <br>
+    Step-by-Step Guide to Ace your Makeup Routine
+    * Prepare yourself to play with makeup and find the look that shouts ‘YOU!’ Take a read through a quick guide to the types of makeup products that you can opt for while shopping online at SUGAR.
+    <br>
+    <br>
+    * Prep: To begin with, always start putting your makeup on a fresh and clean canvas. This means that you should always wash your face and clear out any residue with a good cleansing water or lotion to start right like the SUGAR Swipe Right Cleansing Water. For a true glow-from-within look, make sure you follow this up with a sheet mask that helps your skin feel supple and smooth. Once the face is set, choose from SUGAR’s collection of face primers, which will help keep your makeup in place for a long period of time. A little goes a long way with a pea-sized amount of primer that acts as a skin-perfector, creating the definition of a flawless base whilst blurring out wrinkles and fine lines. According to your skin time, you can choose a mattifying face primer or a hydrating face primer.
+    <br>* Build your makeup routine: Start your face makeup by covering any imperfections, blemishes or skin discolourations by using the SUGAR Magic Wand Waterproof Concealer and the SUGAR Face FWD >> Colour Corrector sticks. Use the two makeup products to cover your under eye dark circles, hyperpigmentation, blemishes, redness, scars and spots. Dot in the product on your face gently and blend in using a light hand. After creating a flawless base, apply your foundation in the shade that’s closest to your skin tone. The best foundation type you could opt for is the foundation cream that comes in a stick format with an attached blending brush at the other end, making it handy and easy to use like the SUGAR Ace Of Face Foundation Stick. After creating your picture-perfect canvas, finish your base by dabbing some compact or loose powder to set it. For those days when you want to go light on your face makeup, simply use a concealer, followed with a BB cream like the SUGAR Goddess Of Flawless SPF30+ BB Cream or SUGARPower Clay SPF20 BB Cushion that suits your skin tone and set it in with the SUGAR Dream Cover SPF15 Mattifying Compact.
+    <br>* Contour and define your features: It’s now time to contour your face, get that perfect chiseled look. Create a defined jawline, highlight your best features and give yourself those flushed cheeks. Use the SUGAR Contour De Force Mini Bronzer or the SUGAR Face FWD >> Contour Stick under your cheekbones to sculpt and define. Apply small amounts of your bronzer along the hollow till your hairline and on the sides of your nose to achieve a defined look. You can also apply it under your jawline for a completely sculpted look. For a brilliant flush of colour use a blush brush and apply the SUGAR Contour De Force Mini Blush to the apples of the cheek. Amp up the shine and glow on your skin by applying the SUGAR Contour De Force Mini Highlighter. Apply your highlighter anywhere you want an intense glow, like the top of your cheekbones, over or under browbones, down the bridge of the nose, on the cupid's bow of your lips and even the inner corner of the eyes.
+    <br>* Flaunt beautiful eye makeup: Now let’s talk about creating an impeccable ‘eye candy’! Start your eye makeup by defining your eyebrow. Use the SUGAR Arch Arrival Brow Definer in the right shade that matches the shade of your eyebrow hair. Define and fill in your eyebrows in short strokes, and then comb them out with the attached brush to achieve naturally groomed or strikingly bold eyebrows. Next, win over your eye game by choosing a richly pigmented and blendable eyeshadow palette that comes with a mirror and dual-ended applicator. Your eye shadow kit should include matte eyeshadow shades in nudes and deeper hues, metallic and foil powders. You can choose any of your fave from the SUGAR Blend The Rules Eyeshadow Palette or the new Wonder Woman eyeshadow palettes that has a mix of matte, shimmer and high-shine foil finish eyeshadow shades and bronzer, blush to add definition. 
+    <br>* Pretty up your nails: Your makeup kit is never complete without a range of nail polish colours. Let your fingers do the talking with SUGAR’s nail polish range called Tip Tac Toe Nail Lacquers that are sure to keep your tips on-point! Choose your favourite nail paint colours from a wide range of glossy, matte or shimmer nail lacquers. The chip-free, streak-free formulation, quick dry formula and specially crafted ergonomic applicator checks on all your nail paint woes. Get experimental and creative with nail polish trends and nail art fads by choosing the best fits for you from our wide range of nail paintcolours. 
+    Buy the best of SUGAR Beauty Kits & Makeup Value sets that are perfect to indulge! 
+    Worried about what to pack for your next summer vacay trip or looking for all-in-one makeup sets to glam for a wedding? Choose from an assemblage of gorgeous beauty kits and makeup combos like the Liquid Lipstick + Kohl Value set and Eyeliner + Kajal Value set or from super saver combo packs like the Lip Crayon value set and Prepped Up Combo face mask sheets. Indulge in glowing skin beauty set or beginner-friendly makeup kit that includes everything for you to look fabulous. Pick our exclusive launch Pride Edition mini lipstick sets in rainbow-themed packaging are all-out bold, loud and bright in every way.
+    <br>
+    <br>
+    SUGAR’s new skincare range: Products that add glow and keep your skin healthy!
+    <br>
+    <br>
+    Makeup looks great when complemented with smooth skin and a natural glow. SUGAR Cosmetics brings for you an exclusive 100% vegetarian and cruelty-free skin care range that will pamper and nourish your skin from within. Grab your SUGAR products from your nearest cosmetic store or order them online in India. From refreshing face masks, illuminating moisturizers, face setting mists and makeup remover, we have it all covered for you. Packed with the goodness of vitamin C, our Citrus Got Real range will cover all your skin concerns like blemishes, dryness and dullness to give you skin that is hydrated, glowing and healthy. For dull, dehydrated and dry skin opt for unique Hyaluronic acid-based skincare packed with great skin loving ingredients. The SUGAR Aquaholic skincare range works magic and provides instant hydration to your skin while relaxing your skin. For those TLC sessions during the weekends, you can choose from a wide range of SUGAR face masks that will rejuvenate your skin.
+    <br>
+    <br>
+    Some skin TLC: Removing your makeup, and continuing with a cleansing, toning and moisturizing routine is mandatory before you retire for the day. This keeps your skin healthy and prevents premature ageing of skin. Use gentle makeup cleansing water to wipe out your waterproof makeup, and then follow the Korean beauty care routine of double cleansing. This means you use an oil-based cleanser to wash your face and clear out any makeup residue, dirt and grime and follow with a gentle water-based face wash after that. Proceed with a toner or facial essence to refine pores and balance skin pH, use a pore cleansing mask and then a rejuvenating Korean sheet mask. Post that you can hydrate your skin using an overnight sleeping face mask. Your perfect picks for a quick skincare routine would be SUGAR Swipe Right Cleansing Water, following with the SUGAR Power Clay 3-min Pore Cleansing Mask or Power Clay Peel Off Mask. You can also use your favourite from SUGAR’s wide range of Sheet Masks. Then end this routine with the SUGAR Aquaholic Overnight Water Mask. This routine helps to avoid clogging of pores and ensures healthy, supple and fresh-looking skin.
+    
+    
+  </div>
+  <div class="foot_merge" style="height: 250px;">
+<div align="center"><h3>LET’S STAY IN TOUCH</h3></div>
+<div align="center"><h3>Get the latest beauty tips straight to your inbox. Can’t wait to connect!</h3></div>
+<div align="center"><input type="email" placeholder="enter your email" align="center" style="background-color: #e9eaec;"  ><button style="background-color: #000; color: #e7eaee;">subscribe</button></div>
+</div>
+</div>
+  <div class="footer">
+    <div class="log_2">
+      <div class="log_1">
+        <div>
+        <img src="circle-solid.svg" alt="" class="circles_1">
+      </div>
+        <img src="https://in.sugarcosmetics.com/Footer_sugar_icon.svg" alt="" class="circles">
+      </div>
+    </div>
+    <div class="icon">
+      <div><i class="fa-brands fa-facebook fa-2xl" style="color: #e9f1ff;"></i> </div>
+      <div><i class="fa-solid fa-t fa-2xl" style="color: #fafafa;"></i>           </div>          
+      <div><i class="fa-brands fa-youtube fa-2xl" style="color: #fafcff;"></i></div>
+      <div><i class="fa-brands fa-twitter fa-2xl" style="color: #f5f5f5;"></i></div>
+      <div><i class="fa-brands fa-instagram fa-2xl" style="color: #e7eaee;"></i></div>
+      <div><i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i></div>
+      <div><i class="fa-light fa-p fa-2xl" style="color: #ffffff;"></i></div></div>
+  <div>
+    <hr  style=" height: 2px;color: aliceblue; width: 1400px; margin-left: 50px;" >
+  <div class="  d-flex " style="justify-content: space-evenly; color: aliceblue; font-size: 20px; background-color: black; margin: 0px 200px 0px 200px;">
+     <a href=""style="color: white;">Store</a>
+     <a href=""style="color: white;">Terms&condition</a>
+     <a href=""style="color: white;">Return</a>
+     <a href=""style="color: white;">FAQs</a>
+     <a href=""style="color: white;">About us</a>
+  </div>
+  <hr style=" height: 2px;color: aliceblue; width: 1400px; margin-left: 50px;">
+  <div class="  d-flex " style="justify-content: space-evenly; color: aliceblue; font-size: 20px; gap: 30px; background-color: black; margin: 0px 50px 0px 50px;">
+  <div >GET IN TOUCH <br>
+    Call us at <br>
+    <a href=""style="color: rgb(164, 156, 156);">1800-209-9933</a> <br>
+    Monday to Friday : 9 AM to 7 PM
+    </div>
+   <div>
+    <br>
+    <br>
+     Support <br>
+    <a href=""style="color: rgb(164, 156, 156);">hello@sugarcosmetics.com</a>
+  </div>
+  <div>
+    <br>
+    <br>
+    Careers <br>
+   <a href="" style="color: rgb(164, 156, 156);"> We're hiring!</a>
+  </div>
+  <div>
+    <br>
+    <br>
+    <a href=""style="color: rgb(164, 156, 156);">Press & Media <br>
+    pr@sugarcosmetics.com</a>
+  </div>
+  <div>
+    <br>
+    <br>
+   <a href=""style="color: rgb(164, 156, 156);"> Influencer Collab <br>
+    Join Us</a>
+  </div>
+</div>
+<hr style=" height: 2px;color: aliceblue;width: 1400px; margin-left:50px;">
+<div class="d-flex" style="justify-content: center; background-color: black; color: aliceblue; height: 100px;gap: 30px;">
+  <div><br>GET THE NEW SUGAR APP TODAY! <p style="color: rgb(164, 156, 156);">
+    Tap into a better shopping experience.
+  </div>
+    <div><br><img src="https://in.sugarcosmetics.com/playstore.png" alt="" style="height: 50px;">
+    </div>
+    <div><br><img src="https://in.sugarcosmetics.com/apple-store.png" alt=""style="height: 50px;">
+    </div>
+</div>
+<!-- <br style="height: 20px;"> -->
+<div align="center" style=" height: 100px;background-color: black; color: aliceblue;font-size: 14px;">
+<hr style=" height: 2px;color: aliceblue; ">
+ <p style="color: rgb(164, 156, 156);"> Copyright © 2023 SUGAR Cosmetics. All rights reserved
+</div>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+<!-- <option>
+    <select> abc </select>
+    <section> mno</section>
+</option>
+
+
+<select>
+    <option>
+        123
+    </option>
+
+    <option > 456</option>
+</select> -->
